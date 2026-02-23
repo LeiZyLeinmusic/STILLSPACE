@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      base: './',  // ← 加這行，解決 Netlify 白畫面
       server: {
         port: 3000,
         host: '0.0.0.0',
