@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  @keyframes slide-right {
+    0%, 100% { transform: translateX(0); opacity: 0.5; }
+    50% { transform: translateX(10px); opacity: 1; }
+  }
+  
+  --animate-slide-right: slide-right 2.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for Design Process */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 232, 228, 0.5) rgba(255, 255, 255, 0.05);
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(234, 232, 228, 0.5);
+  border-radius: 3px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(234, 232, 228, 0.8);
+}
